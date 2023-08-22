@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Borderradius Preview</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <h1>Mach dir deine Kurven!</h1>
+        <form>
+            <label for="curveLeftTop">
+                Ecke LO
+                <input id="curveLeftTop" type="number" min="0" max="180">
+                °
+            </label>
+            <label for="curveRightTop">
+                Ecke RO
+                <input id="curveRightTop" type="number" min="0" max="180">
+                °
+            </label>
+        </form>
+        <div id="backgroundBox">     
+            <div id="variableBox">
+                <p id="changeMyCurve">rund mich ab!</p>
+            </div>
+        </div>
+        <label for="curveLeftBottom">
+            Ecke LU
+            <input id="curveLeftBottom" type="number" min="0" max="180">
+            °
+        </label>
+        <label for="curveRightBottom">
+            Ecke RU
+            <input id="curveRightBottom" type="number" min="0" max="180">
+            °
+        </label>
+    </body>
+</html>
