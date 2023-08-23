@@ -26,4 +26,27 @@ body {
     height: 400px;
     width: 400px;
     z-index: 1;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
 }
+
+#backgroundBoxText {
+    background-color: goldenrod;
+    
+    width: 80%;
+    height: 50%;
+    position: relative;
+    top: 100px;
+    left: 40px;
+    border-radius: 180% 180% 180% 180%;
+    z-index: 2;
+    
+}
+
+textarea {
+    margin-top: 80px;
+    width: 250px;
+}
+
