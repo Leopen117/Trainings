@@ -2,13 +2,18 @@
     const box = document.getElementById("variableBox");
     const textarea = document.getElementById("cssBorderStyleCode");
     
+    box.style.borderTopLeftRadius = 10 + "%";
+    box.style.borderTopRightRadius = 10 + "%";
+    box.style.borderBottomLeftRadius = 10 + "%";
+    box.style.borderBottomRightRadius = 10 + "%";
 
-    function changeTextareaValue() {
-        
+    window.onload = changeTextareaValue
+    
+   function changeTextareaValue() {
         textarea.value = `border-radius: ${box.style.borderTopLeftRadius} ${box.style.borderTopRightRadius} ${box.style.borderBottomLeftRadius} ${box.style.borderBottomRightRadius};`
-    console.log(box.style);
+        console.log("blablabla", box.style.borderTopLeftRadius);
     }
-    document.addEventListener("DOMContentLoaded", changeTextareaValue)
+    
     
     function changeCurveLeftTop(e) {
         box.style.borderTopLeftRadius = e.target.value + "%";
