@@ -9,24 +9,27 @@
 </head>
 
 <body>
-    <span id="headline">
+    <div id="headline">
         <h1>Converter</h1>
-        <p>from binary to decimal in just one click</p>
-    </span>
-    <label for="binaryNumber">
-        Binary Number 
-        <input id="binaryNumber" type="text" placeholder="Enter your binary" pattern="[01]*" title="Hier nur 0 oder 1 eingeben"></textarea>
-    </label>
+        <p>From binary to decimal in just one click</p>
+    </div>
+    <div id="labelBinaryNumber">    
+        <label for="binaryNumber">
+            Binary Number 
+            <input id="binaryNumber" type="text" maxlength="8" placeholder="Enter your binary" pattern="[01]*" title="Hier nur 0 oder 1 eingeben"></textarea>
+        </label>    
+    </div>    
+    <div id="labelDecimalNumber">
+        <label for="decimalNumber">
+            Decimal Number
+            <input id="decimalNumber" placeholder="Here apears your decimal" readonly>
+        </label>
+    </div>
     
-    <span id="arrowElememtOne">
-
-    </span>
+    
+    <div id="arrowElementOne"></div>
     <div id="arrowElementTwo"></div>
     
-    <label for="decimalNumber">
-        Decimal Number
-        <textarea id="decimalNumber" wrap="hard" cols="24" placeholder="Here apears your decimal" readonly></textarea>
-    </label>
 
 </body>
 

@@ -7,14 +7,15 @@ function convertDecimalNumber() {
     const binaryNumber = binary.value
     decimal.value = parseInt(binaryNumber, 2);
 
-        for (let i = 0; i < binaryNumber.length; i++ ) {
-            if (binaryNumber[i] == 0 || binaryNumber[i] == 1) {
+    for (let i = 0; i < binaryNumber.length; i++ ) {
+        if (binaryNumber[i] == 0 || binaryNumber[i] == 1) {
             binary.style.backgroundColor = "green";
-            } else {
+        } else {
             binary.style.backgroundColor = "red";
-            }
+            return
         }
-    
+    }
+
    
     // if (binaryNumber == 0 ) {
         //     binary.style.backgroundColor = "red";
