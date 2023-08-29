@@ -1,48 +1,80 @@
-const inputTextElement = document.getElementById("inputText");
-const outputTextElement = document.getElementById("outputText");
-const btnJsonToCsv = document.querySelector("#convertToCss");
-const btnCsvToJson = document.querySelector("#convertToJson");
+const inputTxt = document.getElementById("inputText");
+const outputTxt = document.getElementById("outputText");
+const btnToCsv = document.querySelector("#convertToCss");
+const btnToJson = document.querySelector("#convertToJson");
 
 
  
 // JSON zu CSV
 
-const inputJsonObj = JSON.parse(inputTextElement.value);
 
 let result = "";
 
-btnJsonToCsv.addEventListener("click", outputCsv);
+btnToCsv.addEventListener("click", outputCsv);
 function outputCsv() {
+    const inputJsonObj = JSON.parse(inputTxt.value);
     let currentLine = "";
 
     inputJsonObj.forEach((obj)=>{
         const inputJsonObjEntries = Object.entries(obj)
         inputJsonObjEntries.forEach(outputCurrentLine)
         function outputCurrentLine(entry)  {
+           // header hinzufügen
             const outputValue = `"${entry[1]}";`;
             currentLine = currentLine + outputValue;
         }  
         currentLine = currentLine + "\n"
     })  
     result = result + currentLine;
-    outputTextElement.value = result
+    outputTxt.value = result
 }
 
 // CSV zu JSON
 
-btnCsvToJson.addEventListener("click", outputJson);
+const someObject = {
+    a: "aaaa",
+    b: "bbbb"
+}
 
+btnToJson.addEventListener("click", outputJson);
+    // Auswahl zwischen (,) oder (;)
 function outputJson() {
-   
-    const splitCsvElement = inputTextElement.value.split(";");
-   
-    splitCsvElement.forEach((obj) => {
-        console.log(obj);
+    const splitTxt = inputTxt.value.split("\n");
+    const headTxt = splitTxt.shift()
+    const splitHeadTxt = headTxt.split(","); 
+    console.log("splitTxt", splitTxt);
+    console.log("headTxt", headTxt);
+    console.log("splitHeadTxt", splitHeadTxt);
+
+
+ 
+    let result = []
+    splitTxt.forEach((obj) => {
+        const currentLine = obj.split(",");
+        const outputJSON = {} 
+        console.log("currentLine", currentLine)
+        currentLine.forEach((obj, i) => {
+                outputJSON[splitHeadTxt[i]] = currentLine[i];
+                
+                
+            })
+            result.push(outputJSON);
+            console.log("outputJSON", outputJSON)
     })
+    outputTxt.value = JSON.stringify(result, null, 2);
+
+    console.log("result", result)
+    
+        
+        
+    
+
     
     
 }
-
+// headCsvElementforEach((obj) => {
+//  const result = obj + currentLine   
+//} )
 
 
 
