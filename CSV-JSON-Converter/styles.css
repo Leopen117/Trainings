@@ -1,49 +1,35 @@
 body {
-    
-    background-color: #5f5e5e;
-}
 
+    background-color: rgb(189, 149, 96)
+}
 h1 {
     text-align: center;
     font-size: 50px;
     font-family: fantasy;
     color: #f0fff0;
 }
-
 ::placeholder {
     color: grey;
+    text-align: center;
 }
-
 textarea {
     height: 500px;
     width: 300px;
-    order: ;
+    border-radius: 5%;
 }
-/* #wrapper {
+#wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px 10px; */
+    margin-left: 25%;
+    gap: 5%;
 }
-
-#buttons {
+#buttonsSpace {
     display: flex;
     flex-direction: column;
-    padding: 25px;
-    
-    
-    text-align: center;
-    
-}   
-
-/* #inputText {
-    order: 1;
+    justify-content: space-around;
 }
-#outputText{
-    order: 3;
-} */
+button {
+    height: 80px;
+    width: 100px;
+}

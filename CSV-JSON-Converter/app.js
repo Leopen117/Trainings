@@ -1,7 +1,9 @@
 const inputTxt = document.getElementById("inputText");
 const outputTxt = document.getElementById("outputText");
-const btnToCsv = document.querySelector("#convertToCss");
+const btnToCsv = document.querySelector("#convertToCsv");
 const btnToJson = document.querySelector("#convertToJson");
+const radio = (",", ";", "tab");
+
 
 
  
@@ -31,10 +33,6 @@ function outputCsv() {
 
 // CSV zu JSON
 
-const someObject = {
-    a: "aaaa",
-    b: "bbbb"
-}
 
 btnToJson.addEventListener("click", outputJson);
     // Auswahl zwischen (,) oder (;)
@@ -50,7 +48,7 @@ function outputJson() {
  
     let result = []
     splitTxt.forEach((obj) => {
-        const currentLine = obj.split(",");
+        const currentLine = obj.split(splitChar);
         const outputJSON = {} 
         console.log("currentLine", currentLine)
         currentLine.forEach((obj, i) => {

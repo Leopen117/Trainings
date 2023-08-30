@@ -8,15 +8,17 @@
     </head>
     <body>
         <h1>CSV-JSON Converter</h1>
-        <div id="converter">
+        <div id="wrapper">
             
-            <textarea id="inputText" class="inputText" placeholder="Type or Paste your Text here"></textarea>
-            
-            <div>
-            <button id="convertToCss" type="button">convert to CSV</button>
-            <button id="convertToJson" type="button">convert to JSON</button>
-        </div>
-            <textarea id="outputText" class="outputText" readonly></textarea>
+            <textarea id="inputText" class="inputText" placeholder="Type or Paste your Text here..."></textarea>
+
+            <div id="buttonsSpace">
+                <button id="convertToCsv" type="button">convert to CSV</button>
+                
+                <button id="convertToJson" type="button">convert to JSON</button>
+            </div>
+
+            <textarea id="outputText" class="outputText" readonly placeholder="Here will apear your result..."></textarea>
             
         </div>
     </body>
