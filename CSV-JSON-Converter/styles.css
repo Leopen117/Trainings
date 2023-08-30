@@ -1,5 +1,5 @@
 body {
-    text-align: ;
+    
     background-color: #5f5e5e;
 }
 
@@ -10,3 +10,40 @@ h1 {
     color: #f0fff0;
 }
 
+::placeholder {
+    color: grey;
+}
+
+textarea {
+    height: 500px;
+    width: 300px;
+    order: ;
+}
+/* #wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px 10px; */
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    
+    
+    text-align: center;
+    
+}   
+
+/* #inputText {
+    order: 1;
+}
+#outputText{
+    order: 3;
+} */
