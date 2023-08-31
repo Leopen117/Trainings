@@ -12,6 +12,9 @@ let result = "";
 
 // JSON zu CSV
 
+function addToCurrentLine(val) {
+    currentLine = currentLine + `${val}${splitChar}`
+}
 
 
 btnToCsv.addEventListener("click", outputCsv);
@@ -25,23 +28,15 @@ function outputCsv() {
     
     
     const inputKeys = Object.keys(inputJsonObj[0])  
-    inputKeys.forEach(header)
-    function header(key) {
-        const keysValue = `${key}${splitChar}`
-        currentLine = currentLine + keysValue
-    }   
+    inputKeys.forEach((val) => {currentLine += `${val}${splitChar}`})  
     console.log('HEADER currentLine :', Object.keys(inputJsonObj[0]));
     
     
     currentLine = currentLine + "\n"    
     
     inputJsonObj.forEach((obj)=>{
-        const inputJsonObjEntries = Object.entries(obj)
-        inputJsonObjEntries.forEach(outputCurrentLine)
-        function outputCurrentLine(entry)  {    
-            const outputValue = `${entry[1]}${splitChar}`;           
-            currentLine = currentLine + outputValue;          
-        }  
+        const inputJsonObjEntries = Object.values(obj)
+        inputJsonObjEntries.forEach((val) => {currentLine += `${val}${splitChar}`})
         currentLine = currentLine + "\n"
     })  
     result = result + currentLine;
