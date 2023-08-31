@@ -16,6 +16,8 @@ textarea {
     height: 500px;
     width: 300px;
     border-radius: 5%;
+    
+    padding: 10px;
 }
 #wrapper {
     display: flex;
