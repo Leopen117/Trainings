@@ -6,17 +6,7 @@ const sepSelection = document.querySelectorAll("input[name='radio']");
 let currentLine = "" 
 let result = "";
 
-
-
-
-
 // JSON zu CSV
-
-function addToCurrentLine(val) {
-    currentLine = currentLine + `${val}${splitChar}`
-}
-
-
 btnToCsv.addEventListener("click", outputCsv);
 function outputCsv() {
     sepSelection.forEach((r) => {
@@ -24,28 +14,23 @@ function outputCsv() {
              splitChar = r.value
         }
     })
-    const inputJsonObj = JSON.parse(inputTxt.value);
-    
-    
-    const inputKeys = Object.keys(inputJsonObj[0])  
-    inputKeys.forEach((val) => {currentLine += `${val}${splitChar}`})  
+    const inputJsonObj = JSON.parse(inputTxt.value);        
+    const inputKeys = Object.keys(inputJsonObj[0]);  
+    inputKeys.forEach((val) => {currentLine += `${val}${splitChar}`});  
     console.log('HEADER currentLine :', Object.keys(inputJsonObj[0]));
-    
-    
-    currentLine = currentLine + "\n"    
+    currentLine = currentLine + "\n";    
     
     inputJsonObj.forEach((obj)=>{
-        const inputJsonObjEntries = Object.values(obj)
-        inputJsonObjEntries.forEach((val) => {currentLine += `${val}${splitChar}`})
+        const inputJsonObjEntries = Object.values(obj);
+        inputJsonObjEntries.forEach((val) => {currentLine += `${val}${splitChar}`});
         currentLine = currentLine + "\n"
     })  
     result = result + currentLine;
     outputTxt.value = result
 }
 
+
 // CSV zu JSON
-
-
 btnToJson.addEventListener("click", outputJson)
 function outputJson() {
 
@@ -65,50 +50,8 @@ function outputJson() {
         
         currentLine.forEach((obj, i) => {
                 outputJSON[splitHeadTxt[i]] = currentLine[i];
-                
-                
-            })
-            result.push(outputJSON);
-            console.log("outputJSON", outputJSON)
+        })
+        result.push(outputJSON);        
     })
     outputTxt.value = JSON.stringify(result, null, 2);
-
-    console.log("result", result)
-     
-        
-            
-
-
-        
-    
-
-    
-    
 }
-// headCsvElementforEach((obj) => {
-//  const result = obj + currentLine   
-//} )
-
-
-
-
-
-
-
-
-
-
-
-
-// const obj1 = {
-//     name: "Paul",
-//     age: 28
-// }
-
-// const age = obj1.age
-
-// const str = '{name: "Paul", age: 28}'
-
-// const obj2 = JSON.parse(str)
-
-// obj2.age
