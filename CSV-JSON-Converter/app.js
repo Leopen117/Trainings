@@ -29,7 +29,6 @@ function outputCsv() {
     outputTxt.value = result
 }
 
-
 // CSV zu JSON
 btnToJson.addEventListener("click", outputJson)
 function outputJson() {
