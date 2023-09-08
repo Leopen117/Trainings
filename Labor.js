@@ -17,3 +17,8 @@ function spinWords(string){
 
 
 spinWords("Was passiert denn hier");
+
+// Best Practice : 
+//function spinWords(str){
+//  return str.split(' ').map( w => w.length<5 ? w : w.split('').reverse().join('') ).join(' ');
+//}
