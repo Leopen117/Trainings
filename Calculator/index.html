@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="styles.css"/>
-</head>
-<body>
-    <h1>Calculator</h1>
-    <textarea id="display" name="display" readonly ></textarea>
-    <div id="firstLine" name="firstLine">
-        
-    </div>
-    <div id="buttonNumber" name="number">
-            <button id="7" name="7" type="button">1</button>
-            <button id="8" name="8" type="button">1</button>
-            <button id="9" name="9" type="button">1</button>
-            <button id="4" name="4" type="button">1</button>
-            <button id="5" name="5" type="button">1</button>
-            <button id="6" name="6" type="button">1</button>
-            <button id="1" name="1" type="button">1</button>
-            <button id="2" name="2" type="button">1</button>
-            <button id="3" name="3" type="button">1</button>
-            <button id="0" name="0" type="button">1</button>
-            <button id="." name="." type="button">1</button>
-    </div> 
-
-</body>
-<script scr="app.js"></script> 
-</html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <h1>Calculator</h1>
+        <form>
+        <div id="lineZero" name="lineZero">
+            <textarea id="display" name="display" readonly ></textarea>
+        </div>
+        <div id="lineOne" name="lineOne">
+            <button id="reset" name="reset" type="reset">AC</button>
+        </form>    
+            <button id="positiveNegative" name="positiveNegative" type="button">+/-</button>    
+            <button id="divide" name="operator" type="button">/</button>
+        </div>
+        <div id="lineTwo" name="lineTwo">    
+            <button id="seven" name="digit" type="button">7</button>
+            <button id="eight" name="digit" type="button">8</button>
+            <button id="nine" name="digit" type="button">9</button>
+            <button id="multiply" name="operator" type="button">x</button>
+        </div>
+        <div id="lineThree" name="lineThree">
+            <button id="four" name="digit" type="button">4</button>
+            <button id="five" name="digit" type="button">5</button>
+            <button id="six" name="digit" type="button">6</button>
+            <button id="minus" name="operator" type="button">-</button>
+        </div>
+        <div id="lineFour" name="lineFour">
+            <button id="one" name="digit" type="button">1</button>
+            <button id="two" name="digit" type="button">2</button>
+            <button id="three" name="digit" type="button">3</button>
+            <button id="plus" name="operator" type="button">+</button>
+        </div>
+        <div id="lineFive" name="lineFive">
+            <button id="zero" name="digit" type="button">0</button>
+            <button id="dod" name="digit" type="button">.</button>
+            <button id="result" name="result" type="button">=</button>
+        </div> 
+    </body>
+    <script src="app.js"></script> 
+    </html>
