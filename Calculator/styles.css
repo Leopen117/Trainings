@@ -12,15 +12,15 @@ container {
     column-gap: 3px;
     row-gap: 3px;
 }
-h1 {
-    
-    color: blueviolet;
+#headline {
     grid-column-start: 1;
     grid-column-end: 5;
-    font-size: 250%;
-    place-self: center;
-}
+    font-size: 200%;
+    font-weight: bolder;
+    color: blueviolet;
+    background-color: black;
 
+}
 form {
     grid-column-start: 1;
     grid-column-end: 5;

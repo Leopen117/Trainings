@@ -50,3 +50,9 @@ function addResult() {
     }
 
 }
+//Headline Button
+const headlineBtn = document.getElementById("headline")
+headlineBtn.addEventListener("click", hello)
+function hello() {
+    display.value = "Lets do some calculation!"
+}
