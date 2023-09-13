@@ -9,6 +9,11 @@ let usedOpe = "";
 let firstNum = "";
 let secNum = "";
 
+// Reset 
+//reset.addEventListener("click", resetDisplay)
+//function resetDisplay() {
+//    display.value = "";
+//}
 // Zahlen anzeigen
 digits.forEach((obj) => {
     obj.addEventListener("click", addDigit);
