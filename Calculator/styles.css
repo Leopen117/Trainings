@@ -1,18 +1,31 @@
 
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+ height: 100%;
+ width: 100%;
+ display: grid;
+ grid-template-columns: [line1] 40% [line2] auto [line3] 40%;
+ grid-template-rows: [start] 10% [main] auto [end] 30%;
+}
 container {
+    grid-column-start: line2;
+    grid-column-end: line3;
+    grid-row-start: main;
     background-color: black;
-    margin-left: 40%;
-    margin-right: 40%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+
     display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(4, 50px);
-    grid-template-rows: repeat(7, 50px);
+    grid-template-columns: repeat(3, 23%);
+    grid-template-rows: repeat(6, 14,2857143%);
     column-gap: 3px;
     row-gap: 3px;
+    
 }
 #headline {
+    height: 100%;
+    width: 100%;
     grid-column-start: 1;
     grid-column-end: 5;
     font-size: 200%;
@@ -26,12 +39,17 @@ form {
     grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end: 3;
-    display: block;
+    display: grid;
+    grid-template-columns: [line1] 35% [line2] auto [line3] 35%;
+    grid-template-rows: [start] 10% [main] auto [end] 10%;
+    background-color: brown;
 }
 #display {
-    height: 44px;
-    width: 203px;
-    resize: none;    
+    grid-column-start: line1;
+    grid-column-end: 4;
+    grid-row-start: start;
+    grid-row-end: 4;
+    resize: none;
     text-align: end;
 }
 #reset {
@@ -44,6 +62,7 @@ form {
     grid-column-end: 3
 }
 .digit {
+
     color: white;
     background-color: rgba(0, 0, 0, 0.63);
     font-size: large;
@@ -57,4 +76,4 @@ form {
 }
 #reset, #plusMinus {
     background-color: rgb(226, 226, 226);
-} 
+}
