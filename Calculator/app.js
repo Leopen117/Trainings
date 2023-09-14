@@ -10,10 +10,12 @@ let firstNum = "";
 let secNum = "";
 
 // Reset 
-//reset.addEventListener("click", resetDisplay)
-//function resetDisplay() {
-//    display.value = "";
-//}
+reset.addEventListener("click", resetDisplay)
+function resetDisplay() {
+   usedOpe = "";
+   firstNum = "";
+   secNum = "";
+}
 // Zahlen anzeigen
 digits.forEach((obj) => {
     obj.addEventListener("click", addDigit);
@@ -30,10 +32,11 @@ function changeSign() {
 operators.forEach((ope) => {
     ope.addEventListener("click", calculateOperation);
     function calculateOperation() {
+        console.log("ope color :", ope.style.color)
         usedOpe = ope.innerHTML;
         firstNum = parseFloat(display.value);
         display.value = "";
-    }
+}
 })
 // Result
 result.addEventListener("click", addResult);
@@ -50,9 +53,24 @@ function addResult() {
     }
 
 }
+// switch color of target Operator
+//    if (ope.id == minus) {
+//        ope.style.color = white;
+//        ope.style.backgrounColor = orange;
+//    } else if (ope.id == plus) {
+//        ope.style.color = white;
+//        ope.style.backgrounColor = orange;
+//    } else if (ope.id == multiply) {
+//        ope.style.color = white;
+//        ope.style.backgrounColor = orange;
+//    } else if (ope.id == divide) {
+//        ope.style.color = white;
+//        ope.style.backgrounColor = orange;
+//    }
+
 //Headline Button
 const headlineBtn = document.getElementById("headline")
 headlineBtn.addEventListener("click", hello)
 function hello() {
-    display.value = "Lets do some calculation!"
+    display.value = "Let's do some calculation!"
 }

@@ -2,6 +2,7 @@
 html {
     height: 100%;
     width: 100%;
+    background-color: grey;
 }
 body {
  height: 100%;
@@ -11,6 +12,7 @@ body {
  grid-template-rows: [start] 10% [main] auto [end] 30%;
 }
 container {
+    padding: 3px;
     grid-column-start: line2;
     grid-column-end: line3;
     grid-row-start: main;
@@ -28,7 +30,7 @@ container {
     width: 100%;
     grid-column-start: 1;
     grid-column-end: 5;
-    font-size: 200%;
+    font-size: 300%;
     font-weight: bolder;
     color: blueviolet;
     background-color: black;
@@ -51,6 +53,8 @@ form {
     grid-row-end: 4;
     resize: none;
     text-align: end;
+    font-weight: bolder;
+    font-size: 160%;
 }
 #reset {
     grid-column-start: 1;
@@ -67,13 +71,34 @@ form {
     background-color: rgba(0, 0, 0, 0.63);
     font-size: large;
     font-weight: bolder;
+    font-size: 200%;
 }
 .operator {
-    background-color: orange;
-    color: white;
+
     font-size: large;
     font-weight: bolder;
+    font-size: 150%;
 }
+
 #reset, #plusMinus {
     background-color: rgb(226, 226, 226);
+    font-size: 150%;
+    font-weight: bold;
+
+}
+#minus {
+    background-color: orange;
+    color: white;
+}
+#plus {
+    background-color: orange;
+    color: white;
+}
+#divide {
+    background-color: orange;
+    color: white;
+}
+#multiply {
+    background-color: orange;
+    color: white;
 }
