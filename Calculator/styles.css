@@ -74,31 +74,20 @@ form {
     font-size: 200%;
 }
 .operator {
-
+    background-color: orange;
+    color: white;
     font-size: large;
     font-weight: bolder;
     font-size: 150%;
+}
+.button:active,
+.active {
+    background-color: white;
+    color: orange;
 }
 
 #reset, #plusMinus {
     background-color: rgb(226, 226, 226);
     font-size: 150%;
     font-weight: bold;
-
-}
-#minus {
-    background-color: orange;
-    color: white;
-}
-#plus {
-    background-color: orange;
-    color: white;
-}
-#divide {
-    background-color: orange;
-    color: white;
-}
-#multiply {
-    background-color: orange;
-    color: white;
 }

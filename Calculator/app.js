@@ -15,6 +15,9 @@ function resetDisplay() {
    usedOpe = "";
    firstNum = "";
    secNum = "";
+   operators.forEach((e) => {
+        e.classList.toggle("active",false);
+   }) 
 }
 // Zahlen anzeigen
 digits.forEach((obj) => {
@@ -32,10 +35,16 @@ function changeSign() {
 operators.forEach((ope) => {
     ope.addEventListener("click", calculateOperation);
     function calculateOperation() {
-        console.log("ope color :", ope.style.color)
         usedOpe = ope.innerHTML;
         firstNum = parseFloat(display.value);
         display.value = "";
+        operators.forEach((obj) => {
+            if (ope.innerHTML == obj.innerHTML) {
+                obj.classList.toggle("active", true);
+            } else {
+                obj.classList.toggle("active", false);
+            }
+        })
 }
 })
 // Result
