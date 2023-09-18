@@ -62,21 +62,6 @@ function addResult() {
     }
 
 }
-// switch color of target Operator
-//    if (ope.id == minus) {
-//        ope.style.color = white;
-//        ope.style.backgrounColor = orange;
-//    } else if (ope.id == plus) {
-//        ope.style.color = white;
-//        ope.style.backgrounColor = orange;
-//    } else if (ope.id == multiply) {
-//        ope.style.color = white;
-//        ope.style.backgrounColor = orange;
-//    } else if (ope.id == divide) {
-//        ope.style.color = white;
-//        ope.style.backgrounColor = orange;
-//    }
-
 //Headline Button
 const headlineBtn = document.getElementById("headline")
 headlineBtn.addEventListener("click", hello)
