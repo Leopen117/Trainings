@@ -1,11 +1,8 @@
 
-
 import java.util.Scanner;
 
-
-
 public class Main {
-   public static void main(String[] args) {
+  public static void main(String[] args) {
 
     double inputFirst = 0;
     String Operator;
@@ -14,38 +11,37 @@ public class Main {
     Scanner scanner = new Scanner(System.in);
     boolean valid = false;
     
+    System.out.print("Please enter your number: ");
     while (!valid) {
-      try {         
-        System.out.print("Enter your digits: ");
+      if (!scanner.hasNextDouble()) {
+        System.out.print("Please just enter digits!: ");
+        scanner.nextLine();
+      } else {
         inputFirst = scanner.nextDouble();
         valid = true;
-      } catch (Exception e) {
-        System.out.println("Please just enter digits !");        
-        valid = false;        
       }
-      scanner.nextLine();
     }
     
     while (true) {
       System.out.print("Now enter your Operator: ");
       Operator = scanner.next();      
       if (!Operator.equals("+") && !Operator.equals("-") && !Operator.equals("/") && !Operator.equals("*")) {
-          System.out.println("Please enter + or - or + or /.");
+          System.out.println("Please just enter + or - or + or / !");
       } else {
+        scanner.nextLine();
         break;
       }
     }
 
+    System.out.print("Please enter your second number: ");
     while (valid) {
-      try {
-        System.out.print("Finally enter your second digit: ");
+      if (!scanner.hasNextDouble()) {
+        System.out.print("Please just enter digits!: ");
+        scanner.nextLine();
+      } else {
         inputSecond = scanner.nextDouble();
-        valid = false;  
-      } catch (Exception e) {
-        System.out.println("Please just enter digits !");
-        valid = true; 
+        valid = false;
       }
-      scanner.nextLine();
     }
 
     if (Operator.equals("+")) {
@@ -63,5 +59,5 @@ public class Main {
     }
 
     }
-    
- }
+
+}
