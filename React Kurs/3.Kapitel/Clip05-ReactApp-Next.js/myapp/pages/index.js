@@ -27,6 +27,9 @@ export default function Home() {
   const [ints, setInts] = useState([1, 2, 3]);
   function addValue(incrementValue) {
     const newVal = Math.max(...ints) + incrementValue;
+    // Math.max(...ints) ==== Math.max(1,2,3)
+    const newArray = [...ints, 4] // => [1,2,3,4]
+
     setInts([...ints, newVal]);
   }
   return (
