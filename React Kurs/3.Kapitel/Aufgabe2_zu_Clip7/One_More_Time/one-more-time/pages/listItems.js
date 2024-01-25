@@ -9,5 +9,4 @@ function ListItems({ ints, name }) {
     </>
   );
 }
-
 export { ListItems };

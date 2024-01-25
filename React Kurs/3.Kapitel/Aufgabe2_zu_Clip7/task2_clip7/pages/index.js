@@ -1,11 +1,10 @@
-import List from "./list";
+import { List } from "./list";
 
 export default function Home() {
   return (
     <>
-      <List />
-      <List />
-      <List />
+      <List increment={1} name="Paul" />
+      <List increment={1} name="Leon" />
     </>
   );
 }
