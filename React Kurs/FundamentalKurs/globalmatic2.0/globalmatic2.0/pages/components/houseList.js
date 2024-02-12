@@ -1,35 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HouseRow from "./houseRow";
-
-const housesArray = [
-  {
-    id: 1,
-    address: "12 Valley of Kings, Geneva",
-    country: "Switzerland",
-    price: 900000,
-  },
-  {
-    id: 2,
-    address: "89 Road of Forks, Bern",
-    country: "Switzerland",
-    price: 500000,
-  },
-];
+import AddHouse from "./addHouse";
 
 const HouseList = () => {
-  const [houses, setHouses] = useState(housesArray);
+  const [houses, setHouses] = useState([]);
 
-  const addHouse = () => {
-    setHouses([
-      ...houses,
-      {
-        is: 3,
-        address: "32 Valley Way, New York",
-        country: "USA",
-        price: 1000000,
-      },
-    ]);
+  const fetchHouses = async () => {
+    const response = await fetch("/api/houses");
+    const houses = await response.json();
+    setHouses(houses);
   };
+
+  useEffect(() => {
+    fetchHouses();
+  }, []);
 
   return (
     <>
@@ -52,9 +36,7 @@ const HouseList = () => {
           ))}
         </tbody>
       </table>
-      <button className="btn btn-primary" onClick={addHouse}>
-        Add
-      </button>
+      <AddHouse onAdd={fetchHouses}></AddHouse>
     </>
   );
 };
