@@ -20,6 +20,9 @@ function App() {
           counterValue={counterValue}
         ></BtnList>
       </div>
+      <div>
+        <Counter counterValue={counterValue}></Counter>
+      </div>
     </>
   );
 }
