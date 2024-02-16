@@ -1,7 +1,15 @@
-import { Inter } from "next/font/google";
+import { VariableBox } from "./components/variableBox";
+import "bootstrap/dist/css/bootstrap.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
-  return <div>Hello World</div>;
+function Home() {
+  return (
+    <div className="bg-secondary text-center vh-100">
+      <div className="container ">
+        <h1>Border-Radius-Previewer</h1>
+      </div>
+      <VariableBox></VariableBox>
+    </div>
+  );
 }
+
+export default Home;
