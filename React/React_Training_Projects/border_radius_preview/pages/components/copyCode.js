@@ -1,13 +1,16 @@
-const CopyCode = ({ code, totalRadius, setTotalRadius }) => {
-  console.log("code:", code);
-  const copycurrentCode = (code) => {
-    navigator.clipboard.writeText(code);
-    alert("Copied the text: " + code);
+const CopyCode = ({ totalRadius, setTotalRadius }) => {
+  console.log("totalRadius:", totalRadius);
+
+  const copycurrentCode = () => {
+    navigator.clipboard.writeText(totalRadius);
+    alert("Copied the text: " + totalRadius);
   };
+
   const pasteOwnCode = (event) => {
     console.log("pastey", event.target.value);
     setTotalRadius(event.target.value);
   };
+
   return (
     <span className="input-group bg-transparent position-absolute top-50 start-50 translate-middle d-flex justify-content-center">
       <button
@@ -24,7 +27,7 @@ const CopyCode = ({ code, totalRadius, setTotalRadius }) => {
         placeholder=""
         aria-label="Border-Radius-Code"
         aria-describedby="Border-Radius"
-        value={code}
+        value={totalRadius}
         onInput={pasteOwnCode}
       />
     </span>

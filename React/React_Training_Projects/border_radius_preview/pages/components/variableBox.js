@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CopyCode } from "../components/copyCode";
 import { InputField } from "./inputField";
 
@@ -7,7 +7,15 @@ const VariableBox = ({ currentUnit }) => {
   const [radiusRu, setRadiusRu] = useState(20);
   const [radiusLb, setRadiusLb] = useState(20);
   const [radiusRb, setRadiusRb] = useState(20);
-  const [totalRadius, setTotalRadius] = useState(20);
+  const [totalRadius, setTotalRadius] = useState(
+    `${radiusLu}${currentUnit} ${radiusRu}${currentUnit} ${radiusLb}${currentUnit} ${radiusRb}${currentUnit}`
+  );
+  useEffect(() => {
+    setTotalRadius(
+      `${radiusLu}${currentUnit} ${radiusRu}${currentUnit} ${radiusLb}${currentUnit} ${radiusRb}${currentUnit}`
+    );
+  }, [radiusLu, radiusRu, radiusLb, radiusRb, currentUnit]);
+
   return (
     <>
       <div className="container w-50 h-50 aligne-middle">
@@ -29,20 +37,6 @@ const VariableBox = ({ currentUnit }) => {
           <CopyCode
             totalRadius={totalRadius}
             setTotalRadius={setTotalRadius}
-            code={[
-              radiusLu +
-                currentUnit +
-                " " +
-                radiusRu +
-                currentUnit +
-                " " +
-                radiusLb +
-                currentUnit +
-                " " +
-                radiusRb +
-                currentUnit,
-            ]}
-            //code={`${radiusLu}${currentUnit} `}
           ></CopyCode>
         </div>
         <div className="row">
