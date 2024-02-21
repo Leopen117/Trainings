@@ -1,16 +1,15 @@
-const InputField = ({ radiusLu, setRadiusLu }) => {
-  const changeRadiusLuValue = (event) => {
-    setRadiusLu(parseInt(event.target.value));
-    console.log("event:", event);
+const InputField = ({ radius, setRadius }) => {
+  const changeRadiusValue = (event) => {
+    setRadius(parseInt(event.target.value));
   };
   return (
     <div className="col">
       <input
-        onChange={changeRadiusLuValue}
+        onChange={changeRadiusValue}
         type="number"
         min="0"
-        max="180"
-        value={radiusLu}
+        max="1000"
+        value={radius}
       />
     </div>
   );

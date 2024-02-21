@@ -1,17 +1,15 @@
-const copyCode = () => {
-  const borderRadiusCode = document.getElementById("borderRadiusCode");
-  navigator.clipboard.writeText(borderRadiusCode.value);
-  alert("Copied the text: " + borderRadiusCode.value);
-};
-
-const CopyCode = () => {
+const CopyCode = (code) => {
+  const copycurrentCode = () => {
+    navigator.clipboard.writeText(code.code);
+    alert("Copied the text: " + code.code);
+  };
   return (
-    <span className="input-group bg-danger position-absolute top-50 start-50 translate-middle d-flex justify-content-center">
+    <span className="input-group bg-transparent position-absolute top-50 start-50 translate-middle d-flex justify-content-center">
       <button
         className="btn btn-primary"
         type="button"
         id="copyButton"
-        onClick={copyCode}
+        onClick={copycurrentCode}
       >
         Copy Code
       </button>
@@ -21,6 +19,8 @@ const CopyCode = () => {
         placeholder=""
         aria-label="Border-Radius-Code"
         aria-describedby="Border-Radius"
+        value={code.code}
+        readOnly
       />
     </span>
   );
