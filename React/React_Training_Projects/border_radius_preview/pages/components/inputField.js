@@ -1,6 +1,6 @@
 const InputField = ({ radius, setRadius }) => {
   const changeRadiusValue = (event) => {
-    setRadius(parseInt(event.target.value));
+    setRadius(event.target.value);
   };
   return (
     <div className="col">
