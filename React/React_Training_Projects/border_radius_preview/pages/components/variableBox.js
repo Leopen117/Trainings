@@ -8,11 +8,11 @@ const VariableBox = ({ currentUnit }) => {
   const [radiusLb, setRadiusLb] = useState(20);
   const [radiusRb, setRadiusRb] = useState(20);
   const [totalRadius, setTotalRadius] = useState(
-    `${radiusLu}${currentUnit} ${radiusRu}${currentUnit} ${radiusLb}${currentUnit} ${radiusRb}${currentUnit}`
+    `${radiusLu}${currentUnit} ${radiusRu}${currentUnit} ${radiusRb}${currentUnit} ${radiusLb}${currentUnit}`
   );
   useEffect(() => {
     setTotalRadius(
-      `${radiusLu}${currentUnit} ${radiusRu}${currentUnit} ${radiusLb}${currentUnit} ${radiusRb}${currentUnit}`
+      `${radiusLu}${currentUnit} ${radiusRu}${currentUnit} ${radiusRb}${currentUnit} ${radiusLb}${currentUnit}`
     );
   }, [radiusLu, radiusRu, radiusLb, radiusRb, currentUnit]);
 
